@@ -1,0 +1,62 @@
+.footer{
+    background-color: $color-secondary;
+    grid-column: full-start / full-end;//full bleed
+    padding: 8rem;
+
+    
+}
+
+
+.nav{
+    list-style: none;
+
+   //flexbox is the right choice here ,but we will use grids here ,because then we dont have to define margins
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 2rem;
+    align-items: center;
+
+    &__link:link,
+    &__link:visited{
+        font-size: 1.4rem;
+        color: white;
+        text-decoration: none;
+        font-family: $font-display;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 1.5rem;
+        display: block;//so that padding can be applied
+        transition: all .2s;
+    }
+
+    &__link:hover,
+    &__link:active{
+        background-color: rgba($color:#fff, $alpha: .05);
+        transform: translateY(-3px);
+    }
+}
+
+.copyright{
+    font-size: 1.4rem;
+    margin-top: 6rem;
+    color: $color-grey-light-2;
+    text-align: center;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.footer__link{
+    &:link,&:visited{
+        color: #f7f7f7;
+        text-decoration: none;
+        text-transform: uppercase;
+        display: inline-block;
+        transition: all .2s;
+        background-color:#333333;
+    }
+    &:hover,&:active{
+        color: $color-primary;
+        box-shadow: 0 1rem 2rem rgba(black,.4rem);
+        transform : rotate(5deg) scale(1.3);
+    }
+}
